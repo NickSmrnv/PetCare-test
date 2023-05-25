@@ -1,8 +1,77 @@
+.nav {
+  position: relative;
+
+  &--closed .nav__toggle > span,
+  .nav__toggle > span::before,
+  .nav__toggle > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $purple-blue;
+    transition-duration: .25s;
+  }
+  .nav__toggle > span::before {
+    content: '';
+    top: -8px;
+    width: 22px;
+  }
+  .nav__toggle > span::after {
+    content: '';
+    top: 8px;
+    width: 28px;
+  }
+
+  &--opened .nav__list {
+    visibility: visible;
+    top: 0;
+  }
+}
+
 .nav__toggle {
   display: none;
   
   @media (max-width: $tablet-width) {
     display: block;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+}
+
+.nav__close-toggle {
+  display: none;
+  
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    top: 30px;
+    right: 32px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: $light-blue;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 
@@ -11,11 +80,32 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+
+  @media (max-width: $tablet-width) {
+    z-index: 3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    visibility: hidden;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-blue;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
 }
 
 .nav__link {
   text-decoration: none;
   color: $text-gray;
+
+  @media (max-width: $tablet-width) {
+    color: $light-blue;
+    font-weight: 400;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -24,5 +114,24 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav--closed .nav__item {
+    display: none;
+  }
+
+  .nav--nojs .nav__toggle {
+    display: none;
+  }
+
+  .nav--nojs .nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .nav--nojs .nav__item {
+    display: block;
   }
 }

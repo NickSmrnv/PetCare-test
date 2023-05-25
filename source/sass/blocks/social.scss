@@ -1,3 +1,9 @@
+.social {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .social__list {
   @include list-reset;
   display: flex;

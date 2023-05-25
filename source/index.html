@@ -15,16 +15,18 @@
     <div class="main-header__wrapper wrapper">
 
       <!-- logo -->
-      <a class="main-header__link logo" href="#">
+      <a class="main-header__logo logo" href="#">
         <img class="logo__image" src="img/logo.svg" width="200" height="64" alt="Логотип Pet Care.">
       </a>
 
       <!-- navigation -->
-      <nav class="main-header__nav nav">
+      <nav class="main-header__nav nav nav--nojs nav--closed">
         <button class="nav__toggle" type="button">
+          <span></span>
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <ul class="nav__list">
+          <button class="nav__close-toggle" type="button"></button>
           <li class="nav__item">
             <a class=nav__link href="#">Новости</a>
           </li>
@@ -76,27 +78,27 @@
     <!-- hero block -->
     <section class="hero">
       <h1 class="visually-hidden">Ветеринарная клиника - PetCare.</h1>
-      <div class="hero__wrapper wrapper">  
+      <div class="hero__wrapper">  
 
         <!-- swiper -->
         <div class="swiper mySwiper">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button swiper-button-prev"></div>
+          <div class="swiper-button swiper-button-next"></div>
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <h2 class="swiper__title">Мы заботимся о ваших питомцах</h2>
-              <p class="swiper__description">
-                Записывайтесь в ветклиники и консультируйтесь с ветеринарным врачом онлайн
+            <div class="swiper-slide hero__contactus">
+              <h2 class="hero__title">Мы заботимся<br>о ваших питомцах</h2>
+              <p class="hero__description">
+                Записывайтесь в ветклиникии консультируйтесь с ветеринарным врачом онлайн
               </p>
-              <a class="swiper__button button button--gradient" href="#footer">Связаться с нами</a>
-              <img src="img/cat-hero-desktop.png" width="400" height="495" alt="Полосатый котик в полный рост.">
+              <a class="hero__button button button--gradient" href="#footer">Связаться с нами</a>
             </div>
-            <div class="swiper-slide">
-              <h2 class="swiper__title swiper__title--dark">Закажите план заботы</h2>
-              <p class="swiper__description swiper__description--dark">
+            <div class="swiper-slide hero__order">
+              <h2 class="hero__title hero__title--dark">Закажите план заботы</h2>
+              <p class="hero__description hero__description--dark">
                 Регулярная доставка специально подобранного корма и других товаров для кошек и собак
               </p>
-              <img src="img/dog-hero-desktop.jpg" width="1440" height="600" alt="Коричневая собака с красным ошейником.">
+              <span class="hero__price">от 1299 ₽/мес</span>
+              <button class="hero__button hero__button--order button" type="button">Подобрать план</button>
             </div>
           </div>
           <div class="swiper-pagination"></div>
