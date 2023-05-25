@@ -1,0 +1,14 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  @include montserrat-font;
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: 500;
+  color: $text-gray;
+  margin: 0 auto;
+}
