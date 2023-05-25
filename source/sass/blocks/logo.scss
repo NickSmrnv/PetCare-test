@@ -1,3 +1,10 @@
 .logo {
   display: flex;
 }
+
+.logo__image {
+  @media (max-width: $tablet-width) {
+    width: 120px;
+    height: 38px;
+  }
+}
