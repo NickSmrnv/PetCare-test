@@ -1,5 +1,5 @@
 @mixin visually-hidden {
-  @include position-absolute;
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -18,12 +18,12 @@
 }
 
 @mixin wrapper-margin {
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 112px;
+    margin-left: 112px;
   }
 }
 

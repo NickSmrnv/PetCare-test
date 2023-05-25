@@ -1,0 +1,28 @@
+.nav__toggle {
+  display: none;
+  
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.nav__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: $text-gray;
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
