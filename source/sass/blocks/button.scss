@@ -18,7 +18,11 @@
 
   &--gradient {
     background: linear-gradient(90deg, #A0D2DB 0%, #726DA8 100%);
-    transition: background 1s;
+    transition: all 0.5s;
+
+    &:hover {
+      filter: hue-rotate(50deg);
+    }
   }
 
   @media (max-width: $tablet-width) {
