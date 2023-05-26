@@ -9,7 +9,7 @@
 
 .swiper-slide {
   position: relative;
-
+  min-height: 600px;
 
   @media (max-width: $tablet-width) {
     min-height: 400px;
@@ -62,6 +62,7 @@
   background-color: $light-blue;
   width: 16px;
   height: 16px;
+  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
