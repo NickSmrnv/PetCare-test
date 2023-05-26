@@ -152,7 +152,55 @@
         </a>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal">
+      <div class="modal__wrapper">
+        <section class="modal__content">
+          <h2 class="modal__title">Чтобы подобрать план, необходимо заполнить форму ниже</h2>
+          <button class="modal__close-btn" type="button">
+            <span class="visually-hidden">Закрыть окно.</span>
+          </button>
+          <form class="modal__form">
+            <span class="modal__radio-text">У меня:</span>
+            <div class="modal__radio-container">
+              
+              <label class="modal__control">
+                <input class="modal__input visually-hidden" type="radio" name="pet" value="cat" checked>
+                <span class="modal__mark"></span>
+                <span class="modal__text">Кошка</span>
+              </label>
+
+              <label class="modal__control">
+                <input class="modal__input visually-hidden" type="radio" name="pet" value="dog">
+                <span class="modal__mark"></span>
+                <span class="modal__text">Собака</span>
+              </label>
+            </div>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <input class="modal__input" type="text" placeholder="Имя питомца" name="pet name">
+              </li>
+              <li class="modal__item">
+                <input class="modal__input" type="text" placeholder="Порода питомца*" name="pet breed" required>
+              </li>
+              <li class="modal__item">
+                <input class="modal__input" type="text" placeholder="Возраст питомца*" name="pet age" required>
+              </li>
+              <li class="modal__item">
+                <input class="modal__input" type="text" placeholder="Ваш номер телефона" name="phone number">
+              </li>
+              <li class="modal__item">
+                <input class="modal__input" type="text" placeholder="Ваш email*" name="email" required>
+              </li>
+            </ul>
+            <button class="modal__button button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </main>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
