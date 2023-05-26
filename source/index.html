@@ -142,10 +142,13 @@
           <a class="contacts__email" href="mailto:info@petcare.com">info@petcare.com</a>
         </div>
         <div class="main-footer__copyright copyright">
-          <p class="copyright__text">©2021 PetCare. Все права защищены</p>
+          <p class="copyright__text">©2021 PetCare.<span> Все права защищены</span></p>
         </div>
         <a class="main-footer__logo logo" href="#">
-          <img class="logo__image" src="img/logo.svg" width="200" height="64" alt="Логотип Pet Care.">
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+            <img class="logo__image" src="img/logo.svg" width="200" height="64" alt="Логотип Pet Care.">
+          </picture>
         </a>
       </div>
     </footer>

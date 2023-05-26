@@ -43,6 +43,7 @@
 
 .nav__close-toggle {
   display: none;
+  cursor: pointer;
   
   @media (max-width: $tablet-width) {
     position: absolute;
