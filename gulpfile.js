@@ -15,16 +15,16 @@ import htmlmin from 'gulp-htmlmin';
 // Styles
 
 export const styles = () => {
-return gulp.src('source/sass/style.scss', { sourcemaps: true })
-.pipe(plumber())
-.pipe(sass().on('error', sass.logError))
-.pipe(postcss([
-autoprefixer(),
-csso()
-]))
-.pipe(rename('style.min.css'))
-.pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-.pipe(browser.stream());
+  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  .pipe(plumber())
+  .pipe(sass().on('error', sass.logError))
+  .pipe(postcss([
+  autoprefixer(),
+  csso()
+  ]))
+  .pipe(rename('style.min.css'))
+  .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+  .pipe(browser.stream());
 }
 
 // HTML

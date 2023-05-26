@@ -1,0 +1,26 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 24px;
+  line-height: 29px;
+
+  @media (max-width: $tablet-width) {
+    align-items: center;
+  }
+}
+
+.contacts__phone,
+.contacts__email {
+  text-decoration: none;
+  color: $purple-blue;
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}

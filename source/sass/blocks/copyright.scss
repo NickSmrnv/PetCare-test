@@ -1,0 +1,21 @@
+.copyright__text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $purple-blue;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 20px;
+  }
+}
+
+.copyright__text span {
+  @media (max-width: $tablet-width){
+    display: flex;
+    flex-direction: column;
+  }
+}
