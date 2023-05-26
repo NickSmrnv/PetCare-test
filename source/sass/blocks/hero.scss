@@ -1,5 +1,7 @@
 // Первый слайд
 .hero__wrapper {
+  margin-bottom: 70px;
+
   @media (max-width: $tablet-width) {
     @include wrapper-margin;
   }
@@ -8,7 +10,7 @@
 .hero__contactus {
   position: relative;
   background-color: $dark-blue;
-  clip-path: ellipse(80% 83% at center 100px);
+  clip-path: ellipse(80% 83% at center 102px);
 
   &::before {
     position: absolute;
@@ -79,21 +81,22 @@
   margin-bottom: 32px;
   width: 40%;
 
+  @media (max-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    width: 81%;
+    margin-bottom: 21px;
+  }
+
   &--dark {
     color: $dark-blue;
     margin-bottom: 24px;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 16px;
+      width: 73%;
     }
-  }
-
-  @media (max-width: $tablet-width) {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    width: 85%;
-    margin-bottom: 21px;
   }
 }
 

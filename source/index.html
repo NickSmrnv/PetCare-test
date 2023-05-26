@@ -16,7 +16,10 @@
 
       <!-- logo -->
       <a class="main-header__logo logo" href="#">
-        <img class="logo__image" src="img/logo.svg" width="200" height="64" alt="Логотип Pet Care.">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+          <img class="logo__image" src="img/logo.svg" width="200" height="64" alt="Логотип Pet Care.">
+        </picture>
       </a>
 
       <!-- navigation -->
@@ -88,7 +91,7 @@
             <div class="swiper-slide hero__contactus">
               <h2 class="hero__title">Мы заботимся<br>о ваших питомцах</h2>
               <p class="hero__description">
-                Записывайтесь в ветклиникии консультируйтесь с ветеринарным врачом онлайн
+                Записывайтесь в ветклиники и консультируйтесь с ветеринарным врачом онлайн
               </p>
               <a class="hero__button button button--gradient" href="#footer">Связаться с нами</a>
             </div>
@@ -109,23 +112,25 @@
     <section class="content">
       <div class="content__wrapper wrapper">
         <h2 class="visually-hidden">Наши статьи и информация</h2>
-        <article class="content__article article">
-          <h3 class="article__title">Сколько стоит онлайн-консультация с терапевтом?</h3>
-          <div class="article__hover-block">
-            <h3 class="article__title article__title--hover">Онлайн-консультация с терапевтом</h3>
-            <span class="article__price">от 399 ₽</span>
-            <ul class="article__list">
-              <li class="article__item">Аудио, видео или чат</li>
-              <li class="article__item">Продолжительность до 60 минут</li>
-              <li class="article__item">Подробный отчет после консультации: что сделать сейчас, чтобы стало лучше</li>
+        <article class="content__card card card--hover">
+          <h3 class="card__title card__title--arrow">Сколько стоит онлайн-консультация с терапевтом?</h3>
+          <div class="card__info">
+            <h3 class="card__title card__title--hover">Онлайн-консультация<br>с терапевтом</h3>
+            <span class="card__price">от 399 ₽</span>
+            <ul class="card__list">
+              <li class="card__item">Аудио, видео или чат</li>
+              <li class="card__item">Продолжительность до 60 минут</li>
+              <li class="card__item">Подробный отчет после консультации: что сделать сейчас, чтобы стало лучше</li>
             </ul>
-            <a class="article__button button" href="#">Начать консультацию</a>
+            <a class="card__button button" href="#">Начать консультацию</a>
           </div>
         </article>
-        <article class="content__article article">
-          <h3 class="article__title">Самые болезненные породы кошек: топ-5</h3>
-          <p class="article__description">Среди кошачьих пород есть несколько, отличающихся слабым здоровьем.</p>
-          <a class="article__link" href="#">Все статьи о кошках</a>
+        <article class="content__card card card--article">
+          <h3 class="card__title card__title--article">Самые болезненные породы кошек: топ-5</h3>
+          <p class="card__description">Среди кошачьих пород есть несколько, отличающихся слабым здоровьем.</p>
+          <a class="card__link" href="#">
+            <span class="card__link-text">Все статьи о кошках</span>
+          </a>
         </article>
       </div>
     </section>

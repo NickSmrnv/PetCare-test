@@ -1,0 +1,259 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  padding: 40px;
+  background-color: $purple-blue;
+  overflow: hidden;
+  height: 630px;
+  box-sizing: border-box;
+
+  &--hover {
+    position: relative;
+    background-image: image-set("../../img/dog-article-desktop.jpg" 1x, "../../img/dog-article-desktop@2x.jpg" 2x);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    @media (min-width: $desktop-width) {
+      background-position: center;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #333333 100%);
+      width: 100%;
+      height: 50%;
+      left: 0;
+      bottom: 0;
+      border-radius: 0 0 40px 40px;
+    }
+
+    & .card__info {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      right: 100%;
+      background-color: $white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 40px;
+      transition: 0.5s;
+      z-index: 3;
+    }
+
+    &:hover .card__info {
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &--article {
+    position: relative;
+    background-image: image-set("../../img/cat-article-desktop.jpg" 1x, "../../img/cat-article-desktop@2x.jpg" 2x);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #333333 100%);
+      width: 100%;
+      height: 50%;
+      left: 0;
+      bottom: 0;
+      border-radius: 0 0 40px 40px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    height: 405px;
+    padding: 20px;
+  }
+}
+
+.card__title {
+  position: relative;
+  color: $white;
+  z-index: 2;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  padding-right: 25%;
+  margin-bottom: 96px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;    
+    padding-right: 0;
+    margin-bottom: 46px;
+  }
+
+  &--article {
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  &--arrow::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/arrow-long-right.svg");
+    background-repeat: no-repeat;
+    width: 231px;
+    height: 15px;
+    bottom: -35px;
+    left: 1px;
+  }
+
+  &--hover {
+    color: $dark-blue;
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding-right: 0;
+
+    @media (max-width: $desktop-width) {
+      text-align: center;
+    }
+
+    @media (max-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+.card__description {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: $white;
+  margin-bottom: 59px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;    
+    margin-bottom: 35px;
+  }
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  background-color: $text-gray;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+  border-radius: 0 0 40px 40px;
+  text-decoration: none;
+  color: $white;
+
+  @media (max-width: $tablet-width) {
+    height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.card__link-text {
+  padding-left: 40px;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+
+  @media (max-width: $desktop-width) {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 8px;
+  }
+}
+
+.card__price {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: $light-blue;
+
+  @media (max-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 8px;
+  }
+}
+
+.card__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: $text-gray;
+  margin-bottom: 33px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+.card__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url("../../img/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 76px; 
+  line-height: 1.5;
+  min-height: 56px;
+  vertical-align: middle;
+
+  @media (max-width: $tablet-width) {
+    background-size: 32px 32px;
+    padding-left: 40px;
+    min-height: 32px;
+  }
+}
+
+.card__button {
+  width: 67%;
+  margin-bottom: 9px;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 92%;
+    margin-bottom: 20px;
+  }
+}

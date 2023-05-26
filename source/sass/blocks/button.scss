@@ -1,0 +1,29 @@
+.button {
+  @include montserrat-font;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  background: $dark-blue;
+  border: none;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &--gradient {
+    background: linear-gradient(90deg, #A0D2DB 0%, #726DA8 100%);
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+}
